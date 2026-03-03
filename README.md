@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Análisis de la evolución salarial en Argentina (2019–2023)
 
 Este proyecto analiza la evolución de los salarios medianos por actividad económica
@@ -26,3 +27,7 @@ Prox:
 - Ajuste por inflación (salario real)
 - Comparación de salarios nominales
 - Análisis de volatilidad por sector
+=======
+# Analasis-Salarial-Argentina
+Análisis de la evolución salarial en Argentina (2019–2023)
+>>>>>>> 82414cf515045729c322d1672cca8bd2073873fd
