@@ -1,4 +1,4 @@
-📊 Evolución del Salario Real en Argentina (2019–2023)
+📊 Evolución del Salario Real y nominal en Argentina (2019–2023)
 
 Proyecto de Portfolio – Data Analyst
 Agustín Ferrari
