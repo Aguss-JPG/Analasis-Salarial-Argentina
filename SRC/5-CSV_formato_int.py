@@ -1,3 +1,4 @@
+
 import pandas as pd
 import numpy as np
 
@@ -29,6 +30,6 @@ dataframe = dataframe.sort_values(['fecha', 'clae2'])
 
 # Guardar CSV actualizado (opción segura)
 dataframe.to_csv(
-    r"C:\Users\ferra\OneDrive\Documentos\Data Projects\Analisis media salarial 2019-2023\salarios_reales.csv",
+    r"C:\Users\ferra\OneDrive\Documentos\Data Projects\Analisis media salarial 2019-2023\data/salarios_reales.csv",
     index=False
 )

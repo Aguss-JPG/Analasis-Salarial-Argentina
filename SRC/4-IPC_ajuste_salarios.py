@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 salarios = pd.read_csv(
-    r"C:\Users\ferra\OneDrive\Documentos\Data Projects\Analisis media salarial 2019-2023\data\salarios_limpios.csv",
+    "data/salarios_limpios.csv",
     parse_dates=["fecha"]
 )
 
@@ -94,7 +94,7 @@ plt.title("Evolución del salario nominal vs salario real")
 plt.xlabel("Fecha")
 plt.ylabel("Pesos")
 plt.grid(True)
-plt.savefig("nominal_vs_real.")
+plt.savefig("Graficos/nominal_vs_real.")
 plt.show()
 
 """
@@ -151,7 +151,7 @@ plt.bar(
 plt.xticks(rotation=90)
 plt.title("Ranking de salario real promedio por actividad (CLAE)")
 plt.tight_layout()
-#plt.savefig("ranking_salario_real.png")
+#plt.savefig("Graficos/ranking_salario_real.png")
 #plt.show()
 
 
@@ -164,7 +164,7 @@ ranking = (
     .head(10)
 )
 
-# 2. Gráfico de barras horizontal
+# 2. Ranking peores salarios reales
 plt.figure(figsize=(10, 6))
 plt.barh(
     ranking["clae2"].astype(str),
@@ -195,6 +195,6 @@ El ranking por salario real revela diferencias estructurales entre sectores
  lograron proteger mejor el poder adquisitivo de sus trabajadores frente a la inflación.
 """
 salarios.to_csv(
-    "salarios_reales.csv",
+    "Data/salarios_reales_powerbi.csv",
     index=False
 )

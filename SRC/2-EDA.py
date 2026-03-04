@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 dataframe = pd.read_csv(
-    "salarios_clae_clean.csv",
+    "Data/salarios_clae_clean.csv",
     parse_dates=["fecha"]
 )
 
@@ -19,7 +19,7 @@ plt.hist(dataframe["salario_median"], bins=50)
 plt.xlabel("Salario mediano")
 plt.ylabel("Frecuencia")
 plt.title("Distribucion de salario mediano")
-plt.savefig("Dist_salario_med.png")
+plt.savefig("Graficos/Dist_salario_med.png")
 #plt.show()
 
 #Histograma distibucion sin outliers
@@ -31,7 +31,7 @@ plt.hist(
 plt.xlabel("Salario mediano (< 500k)")
 plt.ylabel("Frecuencia")
 plt.title("Distribución del salario mediano (sin outliers extremos)")
-plt.savefig("Dist_salario_med_Sin_Outliers_extremos.png")
+plt.savefig("Graficos/Dist_salario_med_Sin_Outliers_extremos.png")
 #plt.show()
 
 
@@ -40,7 +40,7 @@ plt.figure()
 plt.boxplot(dataframe["salario_median"], vert=False)
 plt.xlabel("Salario mediano")
 plt.ylabel("Boxplot del salario mediano")
-plt.savefig("Boxplot_sal_med.png")
+plt.savefig("Graficos/Boxplot_sal_med.png")
 #plt.show()
 
 #       Media vs Mediana
@@ -65,7 +65,7 @@ plt.xlabel("Fecha")
 plt.ylabel("Salario mediano")
 plt.title("Evolucion del salario mediano (2019 - 2023)")
 plt.savefig(
-    "Evolución_del_salario_mediano.png",
+    "Graficos/Evolución_del_salario_mediano.png",
     dpi=300)
 
 #plt.show()
@@ -110,7 +110,7 @@ plt.legend()
 plt.grid(True)
 plt.tight_layout()
 
-plt.savefig("evolucion_salarios_top_claes.png", dpi=300)
+plt.savefig("Graficos/evolucion_salarios_top_claes.png", dpi=300)
 #plt.show()
 
 #   Normalizar salarios
@@ -146,11 +146,11 @@ plt.legend()
 plt.grid(True)
 
 plt.savefig(
-    "salarios_normalizados_por_clae.png",
+    "Graficos/salarios_normalizados_por_clae.png",
     dpi=300,
     bbox_inches="tight"
 )
-#plt.show()
+plt.show()
 
 #   Normalizar salarios para ver que sector creció más
 #Independientemente de cuánto ganaban en pesos, ¿qué sector tuvo mayor crecimiento relativo?
@@ -189,7 +189,7 @@ plt.legend()
 plt.grid(True)
 plt.tight_layout()
 
-plt.savefig("salarios_normalizados_top_claes.png", dpi=300)
+plt.savefig("Graficos/salarios_normalizados_top_claes.png", dpi=300)
 #plt.show()
 
 """
@@ -342,6 +342,6 @@ Este comportamiento sugiere una dinámica salarial diferencial respecto del rest
 # -------------------------
 
 dataframe.to_csv(
-    "salarios_limpios.csv",
+    "Data/salarios_limpios.csv",
     index=False
 )
